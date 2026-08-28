@@ -1,0 +1,29 @@
+[
+  {"property_id": "aurora-city", "rating": 5, "category": "service", "text": "Front desk remembered our anniversary without being asked.", "date": "2026-07-22"},
+  {"property_id": "aurora-city", "rating": 5, "category": "service", "text": "Every staff member greeted us by name.", "date": "2026-07-28"},
+  {"property_id": "aurora-city", "rating": 4, "category": "service", "text": "Friendly team, quick check-in.", "date": "2026-08-02"},
+  {"property_id": "aurora-city", "rating": 5, "category": "fnb", "text": "Best breakfast spread of our trip.", "date": "2026-07-25"},
+  {"property_id": "aurora-city", "rating": 4, "category": "fnb", "text": "Good restaurant, a bit slow on a busy night.", "date": "2026-08-01"},
+  {"property_id": "aurora-city", "rating": 5, "category": "spa", "text": "The spa treatment was exceptional.", "date": "2026-07-24"},
+  {"property_id": "aurora-city", "rating": 5, "category": "spa", "text": "Loved the spa, will book again.", "date": "2026-07-30"},
+
+  {"property_id": "marlow-house", "rating": 4, "category": "service", "text": "Helpful concierge, small property so it feels personal.", "date": "2026-07-21"},
+  {"property_id": "marlow-house", "rating": 5, "category": "service", "text": "Staff went out of their way to help with our late arrival.", "date": "2026-07-29"},
+  {"property_id": "marlow-house", "rating": 4, "category": "fnb", "text": "Breakfast was simple but well made.", "date": "2026-07-23"},
+  {"property_id": "marlow-house", "rating": 4, "category": "fnb", "text": "Small menu, everything on it was good.", "date": "2026-08-01"},
+  {"property_id": "marlow-house", "rating": 5, "category": "spa", "text": "Tiny spa but a lovely treatment.", "date": "2026-07-26"},
+  {"property_id": "marlow-house", "rating": 4, "category": "spa", "text": "Relaxing, would come back for a massage.", "date": "2026-08-03"},
+
+  {"property_id": "aurora-bay", "rating": 2, "category": "fnb", "text": "Restaurant was closed on our first night with no notice.", "date": "2026-07-20"},
+  {"property_id": "aurora-bay", "rating": 3, "category": "fnb", "text": "Food was fine but service was slow at breakfast.", "date": "2026-07-27"},
+  {"property_id": "aurora-bay", "rating": 4, "category": "fnb", "text": "Dinner was good once it arrived.", "date": "2026-08-02"},
+  {"property_id": "aurora-bay", "rating": 5, "category": "spa", "text": "Ocean-view treatment room, wonderful.", "date": "2026-07-24"},
+  {"property_id": "aurora-bay", "rating": 5, "category": "spa", "text": "Best spa of our whole trip.", "date": "2026-07-31"},
+  {"property_id": "aurora-bay", "rating": 5, "category": "service", "text": "Only one review on service so far, but it was great.", "date": "2026-07-25"},
+
+  {"property_id": "aurora-ridge", "rating": 1, "category": "fnb", "text": "Waited 40 minutes for breakfast and it was cold.", "date": "2026-07-19"},
+  {"property_id": "aurora-ridge", "rating": 2, "category": "fnb", "text": "Restaurant menu did not match what was on the website.", "date": "2026-07-26"},
+  {"property_id": "aurora-ridge", "rating": 2, "category": "fnb", "text": "Same breakfast complaint as last month, nothing has changed.", "date": "2026-08-01"},
+  {"property_id": "aurora-ridge", "rating": 2, "category": "service", "text": "Front desk was unhelpful when we asked about a late checkout.", "date": "2026-07-23"},
+  {"property_id": "aurora-ridge", "rating": 3, "category": "service", "text": "Staff seemed overwhelmed and understaffed.", "date": "2026-08-04"}
+]

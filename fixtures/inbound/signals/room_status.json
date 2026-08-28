@@ -1,0 +1,20 @@
+[
+  {"property_id": "aurora-city", "room": "101", "status": "inspected", "ready_time": "13:10"},
+  {"property_id": "aurora-city", "room": "102", "status": "clean", "ready_time": "14:00"},
+  {"property_id": "aurora-city", "room": "103", "status": "inspected", "ready_time": "14:30"},
+
+  {"property_id": "marlow-house", "room": "1", "status": "inspected", "ready_time": "12:45"},
+  {"property_id": "marlow-house", "room": "2", "status": "clean", "ready_time": "13:50"},
+  {"property_id": "marlow-house", "room": "3", "status": "inspected", "ready_time": "14:00"},
+
+  {"property_id": "aurora-bay", "room": "201", "status": "clean", "ready_time": "13:30"},
+  {"property_id": "aurora-bay", "room": "202", "status": "inspected", "ready_time": "14:20"},
+  {"property_id": "aurora-bay", "room": "203", "status": "clean", "ready_time": "14:45"},
+  {"property_id": "aurora-bay", "room": "204", "status": "dirty", "ready_time": "16:00"},
+
+  {"property_id": "aurora-ridge", "room": "301", "status": "inspected", "ready_time": "14:10"},
+  {"property_id": "aurora-ridge", "room": "302", "status": "clean", "ready_time": "14:55"},
+  {"property_id": "aurora-ridge", "room": "303", "status": "dirty", "ready_time": "16:30"},
+  {"property_id": "aurora-ridge", "room": "304", "status": "dirty", "ready_time": null},
+  {"property_id": "aurora-ridge", "room": "305", "status": "out_of_order", "ready_time": null}
+]

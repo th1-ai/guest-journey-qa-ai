@@ -1,0 +1,17 @@
+[
+  {"property_id": "aurora-city", "channel": "Google", "field": "opening_hours", "canonical_value": "Reception 24h", "listed_value": "Reception 24h", "match": true},
+  {"property_id": "aurora-city", "channel": "Booking.com", "field": "photos", "canonical_value": "12 photos", "listed_value": "12 photos", "match": true},
+  {"property_id": "aurora-city", "channel": "TripAdvisor", "field": "phone", "canonical_value": "+1 555 0101", "listed_value": "+1 555 0101", "match": true},
+
+  {"property_id": "marlow-house", "channel": "Google", "field": "opening_hours", "canonical_value": "Reception 07:00-22:00", "listed_value": "Reception 07:00-22:00", "match": true},
+  {"property_id": "marlow-house", "channel": "Booking.com", "field": "description", "canonical_value": "Boutique 12-room house", "listed_value": "Boutique 12-room house", "match": true},
+  {"property_id": "marlow-house", "channel": "TripAdvisor", "field": "photos", "canonical_value": "9 photos", "listed_value": "9 photos", "match": true},
+
+  {"property_id": "aurora-bay", "channel": "Google", "field": "opening_hours", "canonical_value": "Reception 24h", "listed_value": "Reception 24h", "match": true},
+  {"property_id": "aurora-bay", "channel": "Booking.com", "field": "phone", "canonical_value": "+1 555 0103", "listed_value": "+1 555 0103", "match": true},
+  {"property_id": "aurora-bay", "channel": "TripAdvisor", "field": "photos", "canonical_value": "15 photos, updated this year", "listed_value": "6 photos, several years old", "match": false},
+
+  {"property_id": "aurora-ridge", "channel": "Google", "field": "opening_hours", "canonical_value": "Reception 07:00-23:00", "listed_value": "Reception 24h", "match": false},
+  {"property_id": "aurora-ridge", "channel": "Booking.com", "field": "price", "canonical_value": "From $129", "listed_value": "From $99", "match": false},
+  {"property_id": "aurora-ridge", "channel": "TripAdvisor", "field": "description", "canonical_value": "Mountain lodge, 40 rooms, renovated 2025", "listed_value": "Mountain lodge, 40 rooms", "match": false}
+]

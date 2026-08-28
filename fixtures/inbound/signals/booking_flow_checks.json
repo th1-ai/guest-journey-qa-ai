@@ -1,0 +1,25 @@
+[
+  {"property_id": "aurora-city", "step": "search", "seconds": 20, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-city", "step": "select_room", "seconds": 15, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-city", "step": "guest_details", "seconds": 20, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-city", "step": "payment", "seconds": 25, "max_seconds": 45, "broken": false},
+  {"property_id": "aurora-city", "step": "confirmation", "seconds": 5, "max_seconds": 15, "broken": false},
+
+  {"property_id": "marlow-house", "step": "search", "seconds": 18, "max_seconds": 30, "broken": false},
+  {"property_id": "marlow-house", "step": "select_room", "seconds": 12, "max_seconds": 30, "broken": false},
+  {"property_id": "marlow-house", "step": "guest_details", "seconds": 22, "max_seconds": 30, "broken": false},
+  {"property_id": "marlow-house", "step": "payment", "seconds": 20, "max_seconds": 45, "broken": false},
+  {"property_id": "marlow-house", "step": "confirmation", "seconds": 6, "max_seconds": 15, "broken": false},
+
+  {"property_id": "aurora-bay", "step": "search", "seconds": 20, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-bay", "step": "select_room", "seconds": 15, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-bay", "step": "guest_details", "seconds": 20, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-bay", "step": "payment", "seconds": 70, "max_seconds": 60, "broken": false},
+  {"property_id": "aurora-bay", "step": "confirmation", "seconds": 5, "max_seconds": 15, "broken": false},
+
+  {"property_id": "aurora-ridge", "step": "search", "seconds": 150, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-ridge", "step": "select_room", "seconds": 20, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-ridge", "step": "guest_details", "seconds": 25, "max_seconds": 30, "broken": false},
+  {"property_id": "aurora-ridge", "step": "payment", "seconds": 0, "max_seconds": 60, "broken": true},
+  {"property_id": "aurora-ridge", "step": "confirmation", "seconds": 10, "max_seconds": 15, "broken": false}
+]

@@ -1,0 +1,119 @@
+# ---------------------------------------------------------------------------
+# agent.yaml - Guest Journey QA AI's own knobs.
+#
+# `make setup` copies this file to config/agent.yaml. Edit THAT one; this
+# example stays as a clean reference. See config/hotel.yaml for the systems
+# every agent shares (mode, llm provider, review approvals) - hotel.yaml is
+# your flagship property's identity; the portfolio itself lives here.
+# ---------------------------------------------------------------------------
+
+# --- Which systems this agent actually uses through core/adapters ----------
+# The five signals come from data/imports/*.csv, loaded by tools/store_ext.py,
+# not from core/adapters at all (see docs/integrations.md "What this agent
+# actually reads and writes"). The one thing the registry is used for is
+# SENDING the GM digest - so email is the only entry here. systems.pms and
+# systems.messaging are configured because `make doctor` checks every
+# adapter, but neither is ever called: they stay mock forever and must never
+# trigger the "SAMPLE DATA" warning. Listing email still warns you correctly
+# if the mailbox is left on mock once you are running for real.
+systems_used: [email]
+
+# The portfolio's own name - the "**2026-W35** · <this>" line at the top of
+# EVERY property's digest, GM digests included. `config/hotel.yaml: hotel.name`
+# is only your flagship property's own guest-facing name, not the group's -
+# leaving this blank falls back to that flagship name, which is wrong for any
+# other property in the portfolio. See docs/how-it-works.md "Design decisions
+# where the spec was silent" #3.
+group_name: "Aurora Hospitality Group"
+
+# Which property is the flagship. It always sorts first on the scorecard
+# regardless of score - the rest sort weakest-overall-first, so the gap
+# between houses is the first thing a GM sees. See docs/how-it-works.md
+# "Portfolio ordering".
+flagship: aurora-city
+
+# Every property this agent audits. `id` must be stable (it is half of the
+# idempotency key, alongside the audit week) - do not rename an id once you
+# have run a real audit against it, add a new one instead.
+properties:
+  - id: aurora-city
+    name: "Hotel Aurora"
+    gm_name: "Duty manager"
+    gm_email: "manager@example.com"      # falls back to contacts.escalation_email if blank
+  - id: marlow-house
+    name: "The Marlow House"
+    gm_name: "Duty manager"
+    gm_email: "manager@example.com"
+  - id: aurora-bay
+    name: "Aurora Bay Inn"
+    gm_name: "Duty manager"
+    gm_email: "manager@example.com"
+  - id: aurora-ridge
+    name: "Aurora Ridge Lodge"
+    gm_name: "Duty manager"
+    gm_email: "manager@example.com"
+
+# The six categories every property is scored on, in display order, plus
+# their label. A signal that does not fit one of these (see booking_flow
+# below) is reported under its own key instead, appended after these six -
+# see docs/how-it-works.md "The open score schema". Re-label these for a
+# restaurant (booking flow / arrival / food / service / online presence)
+# without touching any code - see README "Customising".
+score_categories:
+  arrival: "Arrival"
+  room: "Room"
+  fnb: "Food & drink"
+  spa: "Spa"
+  service: "Service"
+  brand: "Brand standards"
+
+# Which team a finding's area reaches when it becomes an action. Unmapped
+# areas (an extra key like "booking", or anything you add later) fall to
+# "General Manager" - see docs/how-it-works.md "Porting buildActionList".
+owners:
+  arrival: "Front Office Manager"
+  room: "Executive Housekeeper"
+  rooms: "Executive Housekeeper"
+  fnb: "F&B Manager"
+  spa: "Spa Manager"
+  service: "Duty Manager"
+  brand: "Marketing Lead"
+  default: "General Manager"
+
+# Thresholds for the five signal collectors (tools/signals.py). Every one is
+# a plain rule, not a model guess - change a number here, re-run, and read
+# the new finding; see tests/test_qa_signals.py for what each one does.
+signals:
+  room_status:
+    ready_by: "15:00"       # a room not clean/inspected by this local time is "late"
+    medium_if_late_at_most: 2   # 1-2 late rooms -> medium finding; 3+ -> high
+  journey_touchpoints:
+    # A touchpoint sent this many hours late (or never) is a finding.
+    late_tolerance_hours: 2
+  reviews:
+    window_days: 30          # only reviews from the last N days feed a theme
+    min_count_for_theme: 2   # a category needs at least this many mentions
+    low_rating_threshold: 3  # ratings at or below this count toward a complaint
+  ota_listings:
+    # Fields where a mismatch is guest-impacting (high) vs cosmetic (low).
+    high_impact_fields: [opening_hours, phone, price, address]
+  booking_flow:
+    # A step over its own max_seconds (from the import) is "medium"; a step
+    # marked broken in the import is always "high" regardless of timing.
+    default_max_seconds: 90
+
+# The optional 2-3 sentence portfolio note (tools/run.py, prompts/portfolio-note.md).
+# The ONLY place this repo calls a model, and it never touches a score or a
+# finding - see docs/how-it-works.md "The one LLM call". Off by default.
+portfolio_note:
+  enabled: false
+  knowledge: []
+
+# How often `tools/run.py --watch` polls when you are not using cron/launchd/
+# systemd, and what `make schedule ARGS="--all"` prints by default.
+poll_seconds: 21600   # 6 hours
+
+schedule:
+  audit:
+    cadence: weekly
+    command: "tools/run.py --once"

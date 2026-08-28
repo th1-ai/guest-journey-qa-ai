@@ -1,0 +1,21 @@
+[
+  {"property_id": "aurora-city", "reservation_ref": "AC-1001", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 0.5},
+  {"property_id": "aurora-city", "reservation_ref": "AC-1002", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 1.2},
+  {"property_id": "aurora-city", "reservation_ref": "AC-1001", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 23},
+  {"property_id": "aurora-city", "reservation_ref": "AC-1002", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 25},
+
+  {"property_id": "marlow-house", "reservation_ref": "MH-1001", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 0.8},
+  {"property_id": "marlow-house", "reservation_ref": "MH-1002", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 1.0},
+  {"property_id": "marlow-house", "reservation_ref": "MH-1001", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 24.5},
+  {"property_id": "marlow-house", "reservation_ref": "MH-1002", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 22},
+
+  {"property_id": "aurora-bay", "reservation_ref": "AB-2001", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 1.5},
+  {"property_id": "aurora-bay", "reservation_ref": "AB-2002", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": 1.5},
+  {"property_id": "aurora-bay", "reservation_ref": "AB-2001", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": null},
+  {"property_id": "aurora-bay", "reservation_ref": "AB-2002", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 30},
+
+  {"property_id": "aurora-ridge", "reservation_ref": "AR-3001", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": null},
+  {"property_id": "aurora-ridge", "reservation_ref": "AR-3002", "touchpoint": "booking_confirmation", "expected_offset_hours": 1, "sent_offset_hours": null},
+  {"property_id": "aurora-ridge", "reservation_ref": "AR-3001", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 40},
+  {"property_id": "aurora-ridge", "reservation_ref": "AR-3002", "touchpoint": "welcome_message", "expected_offset_hours": 24, "sent_offset_hours": 38}
+]
